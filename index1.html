@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testing</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body class="bg-[url('https://t4.ftcdn.net/jpg/03/88/34/91/360_F_388349109_Rq6f7ZqP7NKitbkCkdfm8sSJd1rnb9ls.jpg')] w-full h-screen">
+
+  <nav class=" bg-black w-[100%] h-12 flex justify-between text-white px-3  items-center">
+    <div class="flex items-center">
+        <img class="w-10 h-10 cursor-pointer" src="logo.jpg" alt="profile pic">
+        <p class="px-4 underline cursor-pointer hidden md:block">Anuj-Bag ></p>
+    </div>
+
+    <div class="nav-links absolute bg-black top-[-100%] left-0 w-[100%] border border-white md:hidden">
+        <ul class="flex flex-col md:flex-row gap-3">
+            <a class="px-4 cursor-pointer hover:underline" href="https://www.google.com/">HOME</a>
+            <li class="px-4 cursor-pointer hover:underline ">ABOUT</li>
+            <li class="px-4 cursor-pointer hover:underline">CONTACT</li>
+            <li class="px-4 bg-indigo-700 rounded-md cursor-pointer hover:underline">Sign in</li>
+            
+        </ul>
+    </div>
+    <div class="hidden md:block">
+        <ul class="flex flex-col md:flex-row ">
+            <!-- <li class="px-4 cursor-pointer hover:underline">HOME</li> -->
+            <a class="px-4 cursor-pointer hover:underline" href="https://www.google.com/">HOME</a>
+            <li class="px-4 cursor-pointer hover:underline ">ABOUT</li>
+            <li class="px-4 cursor-pointer hover:underline">CONTACT</li>
+            <li class="px-4 bg-indigo-700 rounded-md cursor-pointer hover:underline">Sign in</li>
+            
+        </ul>
+    </div>
+    
+    <div class="md:hidden">
+        
+        <ion-icon onclick="ontogglemenu(this)" class="text-3xl cursor-pointer" name="menu"></ion-icon>
+        
+    </div>
+
+  </nav>
+  <script>
+      const navLinks = document.querySelector('.nav-links')
+      function ontogglemenu(e){
+          e.name = e.name === 'menu' ? 'close' : 'menu';
+          navLinks.classList.toggle('top-[8%]')
+      }
+  </script>
+
+  <script>
+    const navBar = document.querySelector('.nav-bar')
+    function read(r){
+      r.name = r.name === 'chevron-down-outline'? 'chevron-up-outline':'chevron-down-outline';
+      navBar.classList.toggle('top-[57%]')
+    }
+
+  </script>
+  
+  <!-- About Section start-->
+  <div class="bg-white h-auto px-4 py-2 mx-4 my-0 rounded-2xl">
+    
+    <div>
+      
+      <div class="flex items-center">
+        <img class="p-6 w-40" src="logo.jpg" alt="">
+        <span class="text-4xl font-bold">About Me</span>
+      </div>
+      <div class="p-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In ad aspernatur sapiente, quaerat laborum explicabo nulla provident, pariatur perspiciatis repellat, accusantium iste suscipit dolore nihil voluptatibus molestias dolor quas placeat.
+      </div>
+      
+      <div class="nav-bar absolute bg-white top-[-1000%] px-3 mr-7">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ullam adipisci delectus ex atque, dignissimos quidem dolore itaque alias dolor, expedita explicabo blanditiis architecto repellat accusamus corporis hic. Esse ullam consequatur porro exercitationem eius harum at ipsum quasi? Facilis ratione ipsa, possimus aliquid pariatur, cum quas, velit suscipit similique exercitationem neque voluptatem? Dolorem nisi cupiditate tempore dignissimos voluptas aspernatur atque dolores. Quas facere, provident dolores numquam at accusamus dolorem deserunt reprehenderit eos distinctio doloribus ex officia dignissimos itaque repellat quae quaerat, officiis aut, consequuntur voluptates. Saepe esse ab minima quo necessitatibus vel cum nam perferendis, impedit alias, deserunt nesciunt! Delectus adipisci nesciunt voluptate perferendis consequatur placeat quo? Nostrum, facere! Nihil!</p>
+      </div>
+
+      <ion-icon onclick="read(this)" class="p-3 text-2xl cursor-pointer" name="chevron-down-outline"></ion-icon>
+    </div>
+  </div>
+  <!-- About Section end-->
+
+</body>
+</html>

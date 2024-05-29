@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show More Text on Arrow Down</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="p-6 bg-white shadow-lg rounded-lg">
+        <p id="initial-text" class="text-gray-700">
+            This is the initial text.
+        </p>
+        <p id="more-text" class="text-gray-700 hidden">
+            This is the additional text that is shown when the down arrow key is pressed.
+        </p>
+    </div>
+
+    <script>
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowDown') {
+                const moreText = document.getElementById('more-text');
+                if (moreText.classList.contains('hidden')) {
+                    moreText.classList.remove('hidden');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
